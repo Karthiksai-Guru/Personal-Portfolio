@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karthiksai's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body{
+            background-color: #1f2839;
+        }
+        .box-shadow {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            font-family: cursive, sans-serif;
+            background-color: #B69D74;
+            color: white;
+            padding: 15px 10px 10px 10px;
+            border-radius: 4px;
+            box-shadow:2px 3px 15px 14px #B69D74;
+            height: 40px;
+            display: flex;
+            text-align: center;
+            z-index: 9999;
+        }
+        .pfp img{
+            margin-top: 0.7pc;
+            margin-right: 1pc;
+            margin-left: 0.5pc;
+        }
+        .box-shadow:hover .nav{
+            opacity: 1;
+            visibility: visible;
+        }
+        .box-shadow:hover .heading{
+            margin-left: 15.3pc;
+        }
+        .nav{
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            top: 0;
+        }
+    
+        li a{
+            display: block;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        li a:hover{
+            color: #1f2839;
+        }
+        li{
+            float: left;
+        }
+        .heading{
+            margin-left: 15.3pc;
+            padding-top: 4px;
+            font-size: 25px;
+        }
+        .aboutme{
+            margin-top: 13pc;
+            color: white;
+            display: flex;
+   
+        }
+        .abt_text h2{
+            font-size: 48px;
+            display: block;
+        }
+        .abt_text h2:hover{
+            color: #B69D74;
+            text-decoration: underline;
+            cursor: default;
+        }
+        .abt_text{
+            margin-left: 5pc;
+        }
+        .abt_text p{
+            font-size: 27px;
+            font-family: Georgia, serif;
+            display: block;
+            width: 52pc;
+        }
+        .abt_image{
+            margin-left: 23pc;
+            margin-top: 3pc;
+        }
+        .abt_image img{
+            width: 300px;
+            height: 330px;
+            border-radius: 50%;
+        }
+        .abt_image img:hover{
+            border: 1px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 1pc 0.5pc #B69D74;
+        }
+        .achievements{
+            color: white;
+            margin-top: 15pc;
+            padding-top: 5pc;
+
+        }
+        .achievements h1{
+            font-size: 50px;
+            text-align: center;
+            text-decoration: underline;
+        }
+        .achievement{
+            background-color: #B69D74;
+        }
+        .decode{
+            display: flex;
+            border-bottom: 2px solid #1f2839;
+        }
+        #decode-img{
+            overflow: hidden;
+            max-width: 300px;
+            margin-left: 12pc;
+            margin-bottom: 4pc;
+            margin-top: 4pc;
+        }
+        #decode-img figure{
+            position: relative;
+            width: 300%;
+            margin: 0;
+            left: 0;
+            animation: 5s decode-img infinite;
+        }
+        #decode-img figure img{
+            float: left;
+            width: 33.33%;
+            height: 400px;
+        }
+        @keyframes decode-img{
+            0%{
+                left : 0;
+            }
+            40%{
+                left: 0;
+            }
+            45%{
+                left: -100%;
+            }
+            90%{
+                left: -100%;
+            }
+            95%{
+                left: -200%;
+            }
+            100%{
+                left: -200%;
+            }
+        }
+        .decode-text{
+            font-size: 27px;
+            font-family: Georgia, serif;
+            display: block;
+            width: 52pc; 
+            margin-left: 9pc;
+            margin-bottom: 3pc;
+            margin-top: 2pc;
+        }
+        @keyframes tribal-img{
+            0%{
+                left : 0;
+            }
+            30%{
+                left: 0;
+            }
+            35%{
+                left: -100%;
+            }
+            65%{
+                left: -100%;
+            }
+            70%{
+                left: -200%;
+            }
+            90%{
+                left: -200%;
+            }
+            95%{
+                left: -300%;
+            }
+            100%{
+                left: -300%;
+            }
+        }
+        .tribal{
+            margin-top: 4pc;
+            display: flex;
+            border-bottom: 2px solid #1f2839;
+        }
+
+        #tribal-img{
+            overflow: hidden;
+            max-width: 470px;
+            margin-left: 9pc;
+            margin-bottom: 4pc;
+            margin-top: 2pc;
+        }
+        #tribal-img figure{
+            position: relative;
+            width: 400%;
+            margin: 0;
+            left: 0;
+            animation: 5s tribal-img infinite;
+        }
+        #tribal-img figure img{
+            float: left;
+            width: 25%;
+            height: 300px;
+        }
+        .tribal-text{
+            font-size: 27px;
+            font-family: Georgia, serif;
+            display: block;
+            width: 52pc; 
+            margin-left: 9pc;
+            margin-top: -2pc;
+            margin-right: 12pc;
+            margin-bottom: 4pc;
+        }
+        #smart-img{
+            overflow: hidden;
+            max-width: 400px;
+            margin-left: 8pc;
+            margin-bottom: 4pc;
+            margin-top: 4pc;
+        }
+        #smart-img figure{
+            position: relative;
+            width: 300%;
+            margin: 0;
+            left: 0;
+            animation: 5s decode-img infinite;
+        }
+        #smart-img figure img{
+            float: left;
+            width: 33.33%;
+            height: 320px;
+        }
+        .smart-text{
+            font-size: 27px;
+            font-family: Georgia, serif;
+            display: block;
+            width: 52pc; 
+            margin-left: 9pc;
+            margin-bottom: 3pc;
+            margin-top: 2pc;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #B69D74;
+            display: block;
+            padding: 10px 0;
+            z-index: 9999;
+            border-radius: 4px;
+            box-shadow:0px 3px 8px 10px #B69D74;
+        }
+        .icons{
+            margin-left: 43pc;
+        }
+        
+        .bottom-nav .social-icon {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin: 0 2pc;
+        }
+        
+        .bottom-nav .social-icon:hover {
+            color: #1f2839;
+        }
+        .education{
+            margin: 10pc 13pc;
+        }
+        table {
+            width: 80pc;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 30px;
+        }
+        th, td {
+            border: 2px solid #1f2839;
+            padding: 8px;
+            text-align: left;
+        }
+        tr{
+            background-color: #B69D74;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .education h2 {
+            font-size: 50px;
+            text-align: center;
+            color: white;
+            text-decoration: underline;
+            margin-bottom: 5pc;
+        }
+        tr:hover{
+            background-color: wheat;
+        }
+        .contact-form {
+            background-color: #ffffff;
+            padding: 35px 40px 35px 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            margin: 10pc 36pc;
+        }
+
+        .contact-form h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+        }
+
+        .contact-form label {
+            font-size: 14px;
+            color: #333;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .contact-form button {
+            background-color: #B69D74;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .contact-form button:hover {
+            background-color: #ab813d;
+        }
+        #relay-img{
+            overflow: hidden;
+            max-width: 470px;
+            margin-left: 9pc;
+            margin-bottom: 4pc;
+            margin-top: 2pc;
+        }
+        #relay-img figure img{
+            float: left;
+            height: 320px;
+        }
+        #drama-img{
+            overflow: hidden;
+            max-width: 470px;
+            margin-left: 9pc;
+            margin-bottom: 4pc;
+        }
+        #drama-img figure img{
+            float: left;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-shadow">
+
+        <div class="pfp">
+                <img src="search-icon-free-12.jpg" width="27px" height="27px">
+        </div>
+
+
+        <div class="nav">
+            <ul>
+            <li><a href="#abt">About Me</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+
+        <div class="heading">
+            Karthiksai's Portfolio
+        </div>
+
+    </div>
+
+    <div class="bottom-nav">
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/karthiksai-kumaraguru/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://instagram.com/karthiksaii_" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/Karthiksai-Guru" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="https://leetcode.com/u/karthiksai-kumaraguru/" target="_blank" class="social-icon"><i class="fas fa-code"></i></a>
+        </div>
+    </div>
+
+    <div class="aboutme" id="abt">
+
+        <div class="abt_text">
+            <h2>About Me</h2>
+            <p>Hello, I'm Karthiksai, a passionate and driven first-year B.Tech student in Computer Science and Engineering at Lovely Professional University. I am an aspiring Software Development Engineer (SDE). I’m focused on deepening my understanding of computer science principles, mastering programming languages, and honing my problem-solving skills</p>
+        </div>
+
+
+        <div class="abt_image">
+            <a target="_blank" href="Face Pic.jpg">
+                <img src="Face Pic.jpg">
+            </a>
+        </div>
+
+    </div>
+    <section class="achievement">
+        <div class="achievements" id="achievements">
+
+            <h1>Achievements</h1>
+
+            <div class="decode">
+                <div class="decode-text">
+                    <u><h3>Decode-The-Code</h3></u>
+                    I bagged the 2nd Runner Up trophy in the 'Decode the Code' competition hosted by the School of Computer Science at LPU and was awarded by Dr. Chirag Sharma Sir!<br>
+                    This was a challenging event where participants were tasked with solving a scenario-based programming problem within a limited timeframe using any programming language of their choice. . This high-stakes coding challenge put my problem-solving skills and programming expertise to the test. The competition was fierce, and I'm incredibly proud to have secured a podium finish.I'm grateful for the opportunity to test my skills and learn from other talented programmers.
+                </div>
+                <div id="decode-img">
+                    <figure>
+                        <a target="_blank" href="decode1.jpg"><img src="decode1.jpg"></a>
+                        <a target="_blank" href="decode2.jpg"><img src="decode2.jpg"></a>
+                        <a target="_blank" href="decode1.jpg"><img src="decode1.jpg"></a>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="tribal">
+                <div id="tribal-img">
+                    <figure>
+                        <a target="_blank" href="tribal1.png"><img src="tribal1.png"></a>
+                        <a target="_blank" href="tribal2.png"><img src="tribal2.png"></a>
+                        <a target="_blank" href="tribal3.png"><img src="tribal3.png"></a>
+                    </figure>
+                </div>
+                <div class="tribal-text">
+                    <u><h3>Tribal Echoes</h3></u>
+                    I was a finalist in the very first hackathon I participated.<br>
+                    It was hosted by AIESEC on 28<sup>th</sup> & 29<sup>th</sup> August, 2024. Me and my team had developed 'Tribal Echoes', a one-stop solution to find tribal events, authentic culinary delicacies and Tribal artifacts.It was a 24hr hackathon and It helped me develop my time management skills, creative thinking ability and taught me the structure and procedure of hackathons. It was a great learning experience and shed light on sectors where I need to work upon to become a better developer.
+                </div>
+            </div>
+
+            <div class="decode">
+                <div class="smart-text">
+                    <u><h3>SmartBox - Best Project Award (School Science Exhibition)</h3></u>
+                    I created a secure and innovative "SmartBox" for classroom phone management, designed to curb phone usage during class hours. Using Arduino and fingerprint recognition technology, SmartBox provides students a safe and convenient storage option. This project won the Best Project Award for addressing a real-world problem with a simple yet effective solution.
+                </div>
+                <div id="smart-img">
+                    <figure>
+                        <a target="_blank" href="smartbox1.jpg"><img src="smartbox1.jpg"></a>
+                        <a target="_blank" href="smartbox2.jpg"><img src="smartbox2.jpg"></a>
+                        <a target="_blank" href="smartbox1.jpg"><img src="smartbox1.jpg"></a>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="tribal">
+                <div id="drama-img">
+                    <figure>
+                        <a target="_blank" href="IMG-20230427-WA0011.jpg"><img src="IMG-20230427-WA0011.jpg"></a>
+                    </figure>
+                </div>
+                <div class="tribal-text">
+                    <u><h3>School Drama-Competition Winner</h3></u>
+                    Achieved 1st place in a school drama competition hosted by the government, showcasing creativity, stage presence, and collaboration. This experience strengthened my public speaking skills and confidence in performing under pressure
+                </div>
+            </div>
+
+            <div class="decode">
+                <div class="smart-text">
+                    <u><h3>Third Postion in District-level Relay.</h3></u>
+                    Secured 3<sup>rd</sup> place in the relay event at the zonal athletics competition hosted and awarded by the government. This achievement highlights my dedication to teamwork, resilience, and athletic skill in a competitive setting.
+                </div>
+                <div id="relay-img">
+                    <figure>
+                        <a target="_blank" href="Relay 4x100 Certificate.jpg"><img src="Relay 4x100 Certificate.jpg"></a>
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div class="education" id="education">
+        <h2>Education</h2>
+        <table>
+            <tr>
+                <th>Institution</th>
+                <th>Degree</th>
+                <th>Field of Study</th>
+                <th>Marks</th>
+                <th>Years Attended</th>
+            </tr>
+            <tr>
+                <td>Lovely Professional University</td>
+                <td>B.Tech</td>
+                <td>Computer Science and Engineering</td>
+                <td>Not Available</td>
+                <td>Currently</td>
+            </tr>
+            <tr>
+                <td>Podar International School</td>
+                <td>Higher Secondary (CBSE)</td>
+                <td>Class 12</td>
+                <td>94%</td>
+                <td>2023 - 2024</td>
+            </tr>
+            <tr>
+                <td>Podar International School</td>
+                <td>Secondary (CBSE)</td>
+                <td>Class 10</td>
+                <td>93.2%</td>
+                <td>2021 - 2022</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="contact-form" id="contact">
+        <h2>Contact Me</h2>
+        <form action="/submit_form" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>
